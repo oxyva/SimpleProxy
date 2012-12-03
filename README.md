@@ -32,3 +32,4 @@ Known problems
 
 - If you are unable to connect to the proxy, please check your Windows firewall settings.
 - Sometimes the proxy hangs on a request. The solution is to restart the proxy and try again.
+- All cookies are not send though the proxy and therefore authentication does not work.
