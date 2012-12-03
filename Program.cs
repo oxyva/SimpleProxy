@@ -104,9 +104,12 @@ namespace SimpleProxy{
 
         public void ProcessRequest()
         {
+            // Change the request port to the development server port
+            // Replace external IP for localhost
+            string url = context.Request.Url.ToString().Replace(":" + port, ":" + ConfigurationManager.AppSettings["development_server_port"]).Replace(context.Request.Url.Host, "localhost");
+
             //request console log
-            string url = context.Request.Url.ToString().Replace(":" + port, "");
-            string msg = DateTime.Now.ToString("hh:mm:ss") + " " + context.Request.HttpMethod + " " + context.Request.Url.Host.ToString();
+            string msg = DateTime.Now.ToString("hh:mm:ss") + " " + context.Request.HttpMethod + " " + context.Request.Url.ToString();
             Console.WriteLine(msg);
 
             byte[] result;
