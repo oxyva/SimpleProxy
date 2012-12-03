@@ -27,7 +27,8 @@ Usage
 
 In order to use the proxy first modify the SimpleProxy.exe.config file and change "development_server_port" to the port your development server is running. You might also want to change "proxy_port" which is the port you use to connect the proxy. You can now run SimpleProxy.exe and connect to the port from your testing device via its ip address e.g. 192.168.178.10:9992.
 
-Known bugs
+Known problems
 ==========
 
-Sometimes the proxy hangs on a request. The solution is to restart the proxy and try again.
+- If you are unable to connect to the proxy, please check your Windows firewall settings.
+- Sometimes the proxy hangs on a request. The solution is to restart the proxy and try again.
